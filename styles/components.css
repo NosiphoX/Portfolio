@@ -1,0 +1,22 @@
+.glass-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(255,255,255,0.55),
+    rgba(255,255,255,0.25)
+  );
+
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
+
+  border: 1px solid var(--glass-border);
+  box-shadow:
+    0 20px 40px rgba(120, 90, 60, 0.12);
+
+  transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.glass-panel:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 30px 60px rgba(120, 90, 60, 0.18);
+}

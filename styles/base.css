@@ -1,0 +1,33 @@
+:root {
+  --bg-main: #fff3e4b1;
+
+  --glass-bg: rgba(157, 148, 138, 0.6);
+  --glass-border: rgba(180, 150, 120, 0.25);
+
+  --accent-light: #d8c2a8;
+  --accent-dark: #a8896f;
+
+  --text-main: #4b3a2f;
+  --text-muted: #7a6758;
+
+  --blur-strength: 18px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background: radial-gradient(circle at top left, #f7f1eb, #e7dccf);
+  color: var(--text-main);
+  min-height: 100vh;
+  overflow-x: hidden;
+}

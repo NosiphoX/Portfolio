@@ -1,0 +1,2 @@
+// hero.js
+export default {};
