@@ -376,7 +376,8 @@
 .about-profile p {
   margin: 0.5rem 0;
   font-size: 1rem;
-  color: var(--text-muted);
+  color: var(--text-main);
+  opacity: 0.9;
   line-height: 1.5;
 }
 
@@ -490,4 +491,323 @@
   .timeline-dot {
     left: 20px;
   }
+}
+
+/* ===========================
+   MY WORK / PROJECTS SECTION
+=========================== */
+
+.projects {
+  min-height: 100vh;
+  padding: 7rem 4vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 4rem;
+  position: relative;
+}
+
+/* Grid Layout */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 3rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Project Cards */
+.project-card {
+  background: rgba(255, 248, 240, 0.55);
+  backdrop-filter: blur(var(--blur-strength));
+  -webkit-backdrop-filter: blur(var(--blur-strength));
+  border-radius: 22px;
+  padding: 3rem;
+  box-shadow: 0 18px 40px rgba(120, 90, 60, 0.12);
+  border: 1px solid var(--glass-border);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+/* Hover Lift */
+.project-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 28px 55px rgba(120, 90, 60, 0.16);
+}
+
+/* Headings */
+.project-card h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+/* Description */
+.project-card p {
+  color: var(--text-muted);
+  line-height: 1.65;
+  font-size: 1rem;
+}
+
+/* Skills List */
+.project-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.5rem 0;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.project-card ul li {
+  position: relative;
+  padding-left: 1.4rem;
+  font-size: 0.95rem;
+  color: var(--text-main);
+}
+
+/* Custom bullet */
+.project-card ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--accent-dark);
+}
+
+/* Buttons */
+.project-buttons {
+  margin-top: auto;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Section Title Spacing */
+.projects .section-title {
+  margin-bottom: 1rem;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .project-card {
+    padding: 2.4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .projects {
+    padding: 6rem 1.5rem;
+  }
+}
+
+
+
+
+
+
+
+/* ================================
+   CONTACT SECTION
+================================ */
+
+.contact {
+  min-height: 100vh;
+  width: 100vw;
+  padding: clamp(4rem, 8vw, 8rem) 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Wrapper grid */
+.contact-wrapper {
+  width: 100%;
+  max-width: 1400px;
+  padding-inline: clamp(2rem, 6vw, 6rem);
+  
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(3rem, 6vw, 7rem);
+}
+
+/* ================================
+   LEFT INFO
+================================ */
+
+.contact-info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.contact .section-title {
+  font-size: clamp(3rem, 6vw, 4.5rem);
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.contact-intro {
+  max-width: 520px;
+  line-height: 1.7;
+  font-size: 1.05rem;
+  opacity: 0.9;
+}
+
+/* Details */
+
+.contact-details {
+  display: grid;
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.contact-item span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  opacity: 0.6;
+}
+
+.contact-item p,
+.contact-item a {
+  font-size: 1rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Socials */
+
+.contact-socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.contact-socials a {
+  position: relative;
+  font-size: 0.9rem;
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.contact-socials a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.35s ease;
+}
+
+.contact-socials a:hover {
+  opacity: 1;
+}
+
+.contact-socials a:hover::after {
+  width: 100%;
+}
+
+/* ================================
+   FORM CARD
+================================ */
+
+.contact-form {
+  background: rgba(255, 248, 240, 0.55);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  padding: clamp(3rem, 5vw, 4.5rem);
+  border-radius: 28px;
+
+  box-shadow: 0 30px 60px rgba(120, 90, 60, 0.15);
+
+  display: flex;
+  flex-direction: column;
+  gap: 1.8rem;
+}
+
+/* Inputs */
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.form-group label {
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  opacity: 0.6;
+}
+
+.form-group input,
+.form-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid rgba(40, 40, 40, 0.25);
+
+  padding: 0.7rem 0;
+  font-size: 1rem;
+  color: inherit;
+
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  opacity: 0.5;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: rgba(40, 40, 40, 0.7);
+}
+
+/* Button */
+
+.contact-form .btn-primary {
+  margin-top: 1.5rem;
+  align-self: flex-start;
+}
+
+/* Status text */
+
+.form-status {
+  font-size: 0.85rem;
+  margin-top: 0.5rem;
+  opacity: 0.7;
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+
+@media (max-width: 900px) {
+
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .contact-info {
+    max-width: 620px;
+  }
+
+  .contact-form {
+    border-radius: 22px;
+  }
+
 }

@@ -1,21 +1,26 @@
-// hero.js
-export default {};
-const skillsSection = document.querySelector("#skills");
-const revealTrigger = document.querySelector(".skills-next-trigger");
+export default function initSkillsAnimation() {
 
-if (skillsSection && revealTrigger) {
+  const skillsSection = document.querySelector("#skills");
+  if (!skillsSection) return;
+
+  const bars = skillsSection.querySelectorAll(".bar-fill");
+
   const observer = new IntersectionObserver(
-    (entries) => {
+    entries => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
-          revealTrigger.classList.add("visible");
+
+          bars.forEach(bar => {
+            const level = bar.dataset.level;
+            bar.style.width = `${level}%`;
+          });
+
+          observer.disconnect();
         }
       });
     },
-    {
-      threshold: 1
-    }
+    { threshold: 0.4 }
   );
 
-  observer.observe(revealTrigger);
+  observer.observe(skillsSection);
 }

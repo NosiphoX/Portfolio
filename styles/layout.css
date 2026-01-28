@@ -39,3 +39,65 @@ main {
     padding: 4rem 5vw;
   }
 }
+
+/* ================================
+   SECTION VERTICAL RHYTHM
+================================ */
+
+/* Default stack for any section content */
+.section-inner > * + * {
+  margin-top: clamp(2.5rem, 4vw, 4rem);
+}
+
+/* Headings */
+.section h2,
+.section .section-title {
+  margin-bottom: clamp(1.5rem, 2.5vw, 2.8rem);
+  line-height: 1.05;
+}
+
+/* Intro / lead paragraph */
+.section .section-intro,
+.section .lead {
+  max-width: 720px;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  opacity: 0.85;
+}
+
+/* Groups inside sections */
+.section-group {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(2rem, 3vw, 3.5rem);
+}
+
+/* Cards / blocks spacing */
+.section-grid {
+  display: grid;
+  gap: clamp(2.5rem, 4vw, 4.5rem);
+}
+
+/* Ultra-wide screen polish */
+@media (min-width: 1600px) {
+
+  .section {
+    padding: 7rem 10vw;
+  }
+
+  .section-inner {
+    max-width: 1550px;
+  }
+
+}
+
+/* Mobile vertical tightening already handled, 
+   but keep text comfortable */
+@media (max-width: 600px) {
+
+  .section h2,
+  .section .section-title {
+    margin-bottom: 1.5rem;
+  }
+
+}

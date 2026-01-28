@@ -1,10 +1,16 @@
 import "./sections/hero.js";
-import "./sections/skills.js";
-import "./sections/projects.js";
 import "./sections/contact.js";
+import "./sections/projects.js";
+import "./sections/skills.js";
+import initSkillsAnimation from "./sections/skills.js";
+import initTimeline from "./sections/timeline.js";
+import initScrollReveal from "./scrollReveal.js";
+
+initScrollReveal();
+initSkillsAnimation();
+initTimeline();
 
 console.log("Glass portfolio loaded.");
-
 
 // Select the hamburger button and nav links
 const navToggle = document.querySelector('.nav-toggle');
