@@ -1,0 +1,27 @@
+:root{
+--bg-primary: #0b0b0f;
+--bg-secondary:#111118;
+
+--text-primary: #ffffff;
+--text-secondary:#b8b8c7;
+
+--accent-primary:#8b5cf6;
+--accent-secondary:  #38bdf8;
+--accent-soft:  rgba(139, 92, 246, 0.2);
+
+--glass-bg: rgba(255, 255, 255, 0.08);
+--glass-border: rgba(255, 255, 255, 0.16);
+
+
+--shadow-soft:0 20px 60px rgba(0, 0, 0, 0.35);
+
+--radius-md: 16px;
+--radius-lg:24px;
+--radius-xl:  32px;
+
+ 
+--container-width: 1180px;
+
+--transition-fast:  0.25s ease;
+
+}

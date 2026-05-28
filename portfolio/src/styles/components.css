@@ -1,0 +1,129 @@
+.glass-panel {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(20px);
+  box-shadow: var(--shadow-soft);
+  border-radius: var(--radius-xl);
+}
+
+.section-title {
+  font-size: clamp(2rem, 5vw, 4rem);
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.site-header {
+  position: fixed;
+  top: 1rem;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 0 1rem;
+}
+
+.navbar {
+  width: min(100%, var(--container-width));
+  margin: 0 auto;
+  padding: 0.85rem 1rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  background: rgba(15, 15, 22, 0.72);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(18px);
+  box-shadow: var(--shadow-soft);
+  border-radius: 999px;
+}
+
+.nav-logo {
+  width: 2.8rem;
+  height: 2.8rem;
+  display: grid;
+  place-items: center;
+
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary),
+    var(--accent-secondary)
+  );
+
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  color: var(--text-primary);
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  list-style: none;
+}
+
+.nav-links a {
+  display: inline-flex;
+  padding: 0.75rem 1rem;
+  border-radius: 999px;
+
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  transition: var(--transition-fast);
+}
+
+.nav-links a:hover {
+  color: var(--text-primary);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.nav-toggle {
+  display: none;
+  width: 2.6rem;
+  height: 2.6rem;
+  place-items: center;
+
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text-primary);
+  cursor: pointer;
+}
+
+@media (max-width: 760px) {
+  .nav-toggle {
+    display: grid;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 1rem;
+
+    width: min(260px, calc(100vw - 2rem));
+    padding: 0.75rem;
+
+    display: grid;
+    gap: 0.35rem;
+
+    background: rgba(15, 15, 22, 0.94);
+    border: 1px solid var(--glass-border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-soft);
+
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: var(--transition-fast);
+  }
+
+  .nav-links.is-open {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+
+  .nav-links a {
+    width: 100%;
+  }
+}

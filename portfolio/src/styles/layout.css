@@ -1,0 +1,18 @@
+ main {
+  width: 100%;
+  min-height: 100vh;
+}
+
+.section {
+  width: min(100% - 2rem, var(--container-width));
+  margin: 0 auto;
+  padding: 7rem 0;
+}
+
+.center {
+  text-align: center;
+}
+
+.page-content {
+  padding-top: 8rem;
+}
