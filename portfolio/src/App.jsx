@@ -1,4 +1,4 @@
-
+import Hero from "./components/sections/Hero";
 import Navbar from"./components/layout/Navbar";
 import "./styles/global.css";
 
@@ -9,7 +9,7 @@ function App() {
     <Navbar/>
 
   <main> 
-    
+    <Hero/>
   </main>
     </>
   );
