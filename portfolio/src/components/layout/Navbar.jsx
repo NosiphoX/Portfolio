@@ -1,8 +1,11 @@
-import { useState } from "react";
+// components/layout/Navbar.jsx
 
+import { useState } from "react";
+import useScrollDirection from "../../hooks/useScrollDirection";
 
 function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const { direction, isAtTop } = useScrollDirection();
 
   const navLinks = [
     { label: "Home", href: "#hero" },
@@ -12,11 +15,19 @@ function Navbar() {
     { label: "Contact", href: "#contact" },
   ];
 
+  const headerClasses = [
+    "site-header",
+    direction === "down" && !isAtTop && !menuOpen ? "site-header--hidden" : "",
+    isAtTop ? "site-header--transparent" : "",
+  ]
+    .filter(Boolean)
+    .join(" ");
+
   return (
-    <header className="site-header">
+    <header className={headerClasses}>
       <nav className="navbar">
-        <a href="#hero" className="nav-logo" aria-label="Go to home section">
-          N.M
+        <a href="#hero" className="navbar__brand" aria-label="Go to home section">
+          Portfolio
         </a>
 
         <button
