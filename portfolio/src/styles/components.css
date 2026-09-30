@@ -245,18 +245,6 @@
   display: block;
 }
 
-.horizontal-track {
-  display: flex;
-  gap: 2rem;
-  overflow-x: auto; /* temporary */
-  padding: 2rem;
-}
-
-.horizontal-track > * {
-  flex: 0 0 auto;
-  width: 90vw;
-  max-width: 700px;
-}
 
 /* ============ HERO ============ */
 
