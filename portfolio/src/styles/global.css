@@ -3,6 +3,7 @@
 @import "./layout.css";
 @import "./components.css";
 @import "./sections.css";
+@import "./casestudy.css";
 
 * {
   margin: 0;
