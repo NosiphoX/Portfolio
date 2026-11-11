@@ -4,11 +4,6 @@ import { flowstateData } from "../../data/flowstateCaseStudy";
 import { absaData } from "../../data/absaCaseStudy";
 import { bypData } from "../../data/bypCaseStudy";
 
-// Import project images directly so Vite bundles them reliably for production
-import flowstateImg from "../../images/FlowSate.jpg";
-import absaImg from "../../images/AbsaNextGen.png";
-import bypImg from "../../images/Beyond the Pattern.png";
-
 function HorizontalTrack() {
   const [activeModalData, setActiveModalData] = useState(null);
 
@@ -53,7 +48,7 @@ function HorizontalTrack() {
             <div className="project-flip" style={{ height: "100%", background: "var(--bg-secondary, #111118)", borderRadius: "20px", border: "1px solid var(--glass-border)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
               
               <div style={{ height: "200px", overflow: "hidden", background: "#0b0b0f", position: "relative" }}>
-                <img src={flowstateImg} alt="FlowState Preview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src="/images/FlowSate.jpg" alt="FlowState Preview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <span className="project-flip__cover-status" style={{ position: "absolute", top: "12px", right: "12px", background: "rgba(139,92,246,0.25)", color: "#8b5cf6", padding: "4px 10px", borderRadius: "10px", fontSize: "0.75rem", fontWeight: "700" }}>In Progress</span>
               </div>
 
@@ -83,7 +78,7 @@ function HorizontalTrack() {
             <div className="project-flip" style={{ height: "100%", background: "var(--bg-secondary, #111118)", borderRadius: "20px", border: "1px solid var(--glass-border)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
               
               <div style={{ height: "200px", overflow: "hidden", background: "#0b0b0f", position: "relative" }}>
-                <img src={absaImg} alt="ABSA NextGen Preview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src="/images/AbsaNextGen.png" alt="ABSA NextGen Preview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <span className="project-flip__cover-status" style={{ position: "absolute", top: "12px", right: "12px", background: "rgba(226,54,76,0.25)", color: "#E2364C", padding: "4px 10px", borderRadius: "10px", fontSize: "0.75rem", fontWeight: "700" }}>In Progress</span>
               </div>
 
@@ -121,7 +116,7 @@ function HorizontalTrack() {
             <div className="project-flip" style={{ height: "100%", background: "var(--bg-secondary, #111118)", borderRadius: "20px", border: "1px solid var(--glass-border)", overflow: "hidden", display: "flex", flexDirection: "column" }}>
               
               <div style={{ height: "200px", overflow: "hidden", background: "#0b0b0f", position: "relative" }}>
-                <img src={bypImg} alt="Beyond the Pattern Preview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                <img src="/images/Beyond the Pattern.png" alt="Beyond the Pattern Preview" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                 <span className="project-flip__cover-status" style={{ position: "absolute", top: "12px", right: "12px", background: "rgba(212,181,149,0.25)", color: "#D4B595", padding: "4px 10px", borderRadius: "10px", fontSize: "0.75rem", fontWeight: "700" }}>In Progress</span>
               </div>
 
